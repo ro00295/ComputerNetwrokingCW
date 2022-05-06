@@ -13,16 +13,19 @@ serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', 12001))
 
 while True:
-    date = datetime.datetime(2022,12,25)
+    date = datetime.datetime(2022,12,24)
     Christmas = datetime.datetime(2022,12,25)
     print("Date is ", date)
     rand = random.randint(0, 10)
 
-    if date == Christmas:
-        message, address = serverSocket.recvfrom(1024)
 
-        if len(serverCache) <10:
-            serverCache.append(message)
+    message, address = serverSocket.recvfrom(1024)
+
+    if len(serverCache) <10:
+        serverCache.append(message)
+
+    if date == Christmas:
+
 
         message = message.upper()
 
