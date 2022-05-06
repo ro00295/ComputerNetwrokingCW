@@ -13,7 +13,7 @@ serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', 12001))
 
 while True:
-    date = datetime.datetime(2022,12,24)
+    date = datetime.datetime(2022,12,25)
     Christmas = datetime.datetime(2022,12,25)
     print("Date is ", date)
     rand = random.randint(0, 10)
