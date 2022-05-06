@@ -4,7 +4,7 @@ import time
 from socket import *
 
 pings = 1
-packet = ["candy", "chocolate", "gun", "hat", "toffee","coffee","tea","sweet","custard","bunties","choco"]
+packet = ["candy", "chocolate", "ps4", "hat", "toffee","flower","tea","sweet","custard","toy","ring"]
 #Send ping 10 times
 while pings < 11:
 
