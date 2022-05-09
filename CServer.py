@@ -4,7 +4,7 @@ import sys
 import datetime
 from socket import *
 
-serverCache = []   #stores presents 
+serverCache = []
 # Create a UDP socket
 # Notice the use of SOCK_DGRAM for UDP packets
 serverSocket = socket(AF_INET, SOCK_DGRAM)
@@ -35,6 +35,7 @@ while True:
         serverSocket.sendto(message, address)
         print("Thank you")
         print(message)
-if nowdate != endDate:
+if date == endDate:
+    serverScoket.shutdown(1)
     serverSocket.close()
 print(serverCache)
