@@ -11,21 +11,19 @@ serverSocket = socket(AF_INET, SOCK_DGRAM)
 
 # Assign IP address and port number to socket
 serverSocket.bind(('', 12001))
-
+nowdate = datetime.date;
 while True:
     date = datetime.datetime(2022,12,25)
+    endDate = datetime.datetime(2022,12,26)
     Christmas = datetime.datetime(2022,12,25)
     print("Date is ", date)
     rand = random.randint(0, 10)
 
-
-    message, address = serverSocket.recvfrom(1024)
-
-    if len(serverCache) <10:
-        serverCache.append(message)
-
     if date == Christmas:
+        message, address = serverSocket.recvfrom(1024)
 
+        if len(serverCache) < 10:
+            serverCache.append(message)
 
         message = message.upper()
 
@@ -37,4 +35,6 @@ while True:
         serverSocket.sendto(message, address)
         print("Thank you")
         print(message)
+if nowdate != endDate:
+    serverSocket.close()
 print(serverCache)
