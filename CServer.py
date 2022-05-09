@@ -4,7 +4,7 @@ import sys
 import datetime
 from socket import *
 
-serverCache = []
+serverCache = []   #stores presents 
 # Create a UDP socket
 # Notice the use of SOCK_DGRAM for UDP packets
 serverSocket = socket(AF_INET, SOCK_DGRAM)
